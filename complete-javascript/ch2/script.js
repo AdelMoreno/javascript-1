@@ -234,17 +234,45 @@
  // falsy values: undefined, null, 0, "", NaN
  //truthy values: NOT falsy values
 
- let height;
+//  let height;
 
- height = 23;
+//  height = 23;
 
- if (height || height === 0) {
-     console.log("Variable is defined");
- } else {
-     console.log("Variable has NOT been defined");
- }
+//  if (height || height === 0) {
+//      console.log("Variable is defined");
+//  } else {
+//      console.log("Variable has NOT been defined");
+//  }
 
- // equality operators
- if (height == "23") {
-     console.log("The == operator does type coercion!");
- }
+//  // equality operators
+//  if (height == "23") {
+//      console.log("The == operator does type coercion!");
+//  }
+
+// coding challenge 2
+
+johnsGameOne = 10;
+johnsGameTwo = 10;
+johnsGameThree = 10;
+
+mikesGameOne = 10;
+mikesGameTwo = 10;
+mikesGameThree = 10;
+
+marysGameOne = 10;
+marysGameTwo = 10;
+marysGameThree = 10;
+
+johnsAverage = (johnsGameOne + johnsGameTwo + johnsGameThree) / 3;
+mikesAverage = (mikesGameOne + mikesGameTwo + mikesGameThree) / 3;
+marysAverage = (marysGameOne + marysGameTwo + marysGameThree) / 3;
+
+if (johnsAverage > mikesAverage && johnsAverage > marysAverage) {
+    console.log("John is the winner with " + Math.round(johnsAverage) + " points!");
+} else if (mikesAverage > johnsAverage && mikesAverage > marysAverage) {
+    console.log("Mike is the winner with " + Math.round(mikesAverage) + " points!");
+} else if (marysAverage > johnsAverage && marysAverage > mikesAverage) {
+    console.log("Mary is the winner with " + Math.round(marysAverage) + " points!")
+} else if (mikesAverage === johnsAverage && mikesAverage === marysAverage) {
+    console.log("It was a tie with everyone having " + Math.round(mikesAverage) + " points!")
+}
