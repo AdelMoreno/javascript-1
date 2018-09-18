@@ -98,3 +98,15 @@ console.log(average);
 let x, y;
 x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
 console.log(x, y);
+
+// more operators
+x = x * 2;
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x = x + 1;
+x +=1;
+x++;
+x--;
+console.log(x);
