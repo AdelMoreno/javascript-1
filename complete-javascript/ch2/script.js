@@ -14,3 +14,6 @@ console.log(job);
 
 job = "Teacher";
 console.log(job);
+
+let $3years = 3;
+let johnMark = "John and Mark";
