@@ -251,21 +251,21 @@
 
 // coding challenge 2
 
-johnsGameOne = 10;
-johnsGameTwo = 10;
-johnsGameThree = 10;
+let johnsGameOne = 10;
+let johnsGameTwo = 10;
+let johnsGameThree = 10;
 
-mikesGameOne = 10;
-mikesGameTwo = 10;
-mikesGameThree = 10;
+let mikesGameOne = 10;
+let mikesGameTwo = 10;
+let mikesGameThree = 10;
 
-marysGameOne = 10;
-marysGameTwo = 10;
-marysGameThree = 10;
+let marysGameOne = 10;
+let marysGameTwo = 10;
+let marysGameThree = 10;
 
-johnsAverage = (johnsGameOne + johnsGameTwo + johnsGameThree) / 3;
-mikesAverage = (mikesGameOne + mikesGameTwo + mikesGameThree) / 3;
-marysAverage = (marysGameOne + marysGameTwo + marysGameThree) / 3;
+let johnsAverage = (johnsGameOne + johnsGameTwo + johnsGameThree) / 3;
+let mikesAverage = (mikesGameOne + mikesGameTwo + mikesGameThree) / 3;
+let marysAverage = (marysGameOne + marysGameTwo + marysGameThree) / 3;
 
 if (johnsAverage > mikesAverage && johnsAverage > marysAverage) {
     console.log("John is the winner with " + Math.round(johnsAverage) + " points!");
