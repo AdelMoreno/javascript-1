@@ -127,34 +127,51 @@
  * If / else statements
  */
 
-let firstName = "John";
-let civilStatus = "single";
+// let firstName = "John";
+// let civilStatus = "single";
 
-if (civilStatus === "married") {
-    console.log(firstName + " is married!");
-} else {
-    console.log(firstName + " will hopefully marry soon :)");
-}
+// if (civilStatus === "married") {
+//     console.log(firstName + " is married!");
+// } else {
+//     console.log(firstName + " will hopefully marry soon :)");
+// }
 
-let isMarried = false;
+// let isMarried = false;
 
-if (isMarried) {
-    console.log(firstName + " is married!");
-} else {
-    console.log(firstName + " will hopefully marry soon :)");
-}
+// if (isMarried) {
+//     console.log(firstName + " is married!");
+// } else {
+//     console.log(firstName + " will hopefully marry soon :)");
+// }
 
-let markHeight = 2;
-let markMass = 62;
+// let markHeight = 2;
+// let markMass = 62;
 
-let johnHeight = 1.75;
-let johnMass = 57;
+// let johnHeight = 1.75;
+// let johnMass = 57;
 
-let markBmi = (markHeight * markHeight) / markMass;
-let johnBmi = (johnHeight * johnHeight) / johnMass;
+// let markBmi = (markHeight * markHeight) / markMass;
+// let johnBmi = (johnHeight * johnHeight) / johnMass;
 
-if (markBmi < johnBmi) {
-    console.log("Mark's BMI is lower than John's");
-} else {
-    console.log("Mark's BMI is larger than John's");
-}
+// if (markBmi < johnBmi) {
+//     console.log("Mark's BMI is lower than John's");
+// } else {
+//     console.log("Mark's BMI is larger than John's");
+// }
+
+/**
+ * boolean logic
+ */
+
+ let firstName = "John";
+ let age = 16;
+
+ if (age < 13) {
+     console.log(firstName + " is a boy.") 
+  } else if(age >= 13 && age < 20) {
+      console.log(firstName + " is a teenager.")
+  } else if(age >= 20 && age < 30) {
+      console.log(firstName + " is a young man.")
+  } else {
+     console.log(firstName + " is a man.")
+ }
