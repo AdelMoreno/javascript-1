@@ -110,16 +110,16 @@
 // x++;
 // x--;
 // console.log(x);
-markHeight = 2;
-markMass = 62;
+let markHeight = 2;
+let markMass = 62;
 
-johnHeight = 1.75;
-johnMass = 57;
+let johnHeight = 1.75;
+let johnMass = 57;
 
-markBmi = (markHeight * markHeight) / markMass;
-johnBmi = (johnHeight * johnHeight) / johnMass;
+let markBmi = (markHeight * markHeight) / markMass;
+let johnBmi = (johnHeight * johnHeight) / johnMass;
 
-bmiComparison = markBmi > johnBmi;
+let bmiComparison = markBmi > johnBmi;
 
 console.log("Is Mark's BMI higher than John's? " + bmiComparison);
 
