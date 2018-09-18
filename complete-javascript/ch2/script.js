@@ -51,27 +51,50 @@
 /**
  * Basic operators
  */
-let now, yearJohn, yearMark;
-now = 2020;
-ageJohn = 28;
-ageMark = 33;
+// let now, yearJohn, yearMark;
+// now = 2020;
+// ageJohn = 28;
+// ageMark = 33;
 
-//Math operators
-yearJohn = now - ageJohn;
-yearMark = now - ageMark;
- console.log(yearJohn);
+// //Math operators
+// yearJohn = now - ageJohn;
+// yearMark = now - ageMark;
+//  console.log(yearJohn);
 
- console.log(now + 2);
- console.log(now * 2);
- console.log(now / 10);
+//  console.log(now + 2);
+//  console.log(now * 2);
+//  console.log(now / 10);
 
- //logical operators
- let johnOlder = ageJohn < ageMark;
- console.log(johnOlder);
+//  //logical operators
+//  let johnOlder = ageJohn < ageMark;
+//  console.log(johnOlder);
 
- // typeof operator
-console.log(typeof johnOlder);
-console.log(typeof ageJohn);
-console.log(typeof "Mark is older than John");
-let x;
-console.log(typeof x);
+//  // typeof operator
+// console.log(typeof johnOlder);
+// console.log(typeof ageJohn);
+// console.log(typeof "Mark is older than John");
+// let x;
+// console.log(typeof x);
+
+/**
+ * operator precedence
+ */
+
+let now = 2018;
+let yearJohn = 1989;
+let fullAge = 18;
+
+// multiple operators
+let isFullAge = now - yearJohn >= fullAge; //true
+console.log(isFullAge);
+
+// grouping
+let ageJohn = now - yearJohn;
+let ageMark = 35;
+let average = (ageJohn + ageMark) / 2;
+console.log(average);
+
+// multiple assignments
+let x, y;
+x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y);
