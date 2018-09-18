@@ -74,39 +74,52 @@
 // console.log(typeof ageJohn);
 // console.log(typeof "Mark is older than John");
 // let x;
-// console.log(typeof x);
+// // console.log(typeof x);
 
-/**
- * operator precedence
- */
+// /**
+//  * operator precedence
+//  */
 
-let now = 2018;
-let yearJohn = 1989;
-let fullAge = 18;
+// let now = 2018;
+// let yearJohn = 1989;
+// let fullAge = 18;
 
-// multiple operators
-let isFullAge = now - yearJohn >= fullAge; //true
-console.log(isFullAge);
+// // multiple operators
+// let isFullAge = now - yearJohn >= fullAge; //true
+// console.log(isFullAge);
 
-// grouping
-let ageJohn = now - yearJohn;
-let ageMark = 35;
-let average = (ageJohn + ageMark) / 2;
-console.log(average);
+// // grouping
+// let ageJohn = now - yearJohn;
+// let ageMark = 35;
+// let average = (ageJohn + ageMark) / 2;
+// console.log(average);
 
-// multiple assignments
-let x, y;
-x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
-console.log(x, y);
+// // multiple assignments
+// let x, y;
+// x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
+// console.log(x, y);
 
-// more operators
-x = x * 2;
-x *= 2;
-console.log(x);
-x += 10;
-console.log(x);
-x = x + 1;
-x +=1;
-x++;
-x--;
-console.log(x);
+// // more operators
+// x = x * 2;
+// x *= 2;
+// console.log(x);
+// x += 10;
+// console.log(x);
+// x = x + 1;
+// x +=1;
+// x++;
+// x--;
+// console.log(x);
+markHeight = 2;
+markMass = 62;
+
+johnHeight = 1.75;
+johnMass = 57;
+
+markBmi = (markHeight * markHeight) / markMass;
+johnBmi = (johnHeight * johnHeight) / johnMass;
+
+bmiComparison = markBmi > johnBmi;
+
+console.log("Is Mark's BMI higher than John's? " + bmiComparison);
+
