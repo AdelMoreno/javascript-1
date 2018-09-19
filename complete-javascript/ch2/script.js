@@ -362,27 +362,30 @@
 // let isDesigner = john.indexOf("designer") === -1 ? "john is Not a designer" : "John Is a designer";
 // console.log(isDesigner);
 
-let billArray = [];
+let tipArray = [];
 let totalArray = [];
 
 function calculateTotal(bill) {
     if (bill < 50) {
-        let total = (bill * .2) + bill;
-        billArray.push(bill);
+        let tip = Math.round((bill * .2)*100)/100;
+        tipArray.push(tip);
+        let total = bill + tip;
         totalArray.push(total)
     } else if (bill >= 50 && bill <= 200) {
-        let total = (bill * .15) + bill;
-        billArray.push(bill);
+        let tip = Math.round((bill * .15)*100)/100;
+        tipArray.push(tip);
+        let total = bill + tip;
         totalArray.push(total)
     } else if (bill > 200) {
-        let total = (bill * .1) + bill;
-        billArray.push(bill);
+        let tip = Math.round((bill * .1)*100)/100;
+        tipArray.push(tip);
+        let total = (bill + tip)
         totalArray.push(total)
     }
 }
 
-calculateTotal(20);
-calculateTotal(120);
-calculateTotal(300);
+calculateTotal(124);
+calculateTotal(48);
+calculateTotal(268);
 
-console.log(billArray, totalArray);
+console.log(tipArray, totalArray);
