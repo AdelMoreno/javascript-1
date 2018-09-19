@@ -362,30 +362,60 @@
 // let isDesigner = john.indexOf("designer") === -1 ? "john is Not a designer" : "John Is a designer";
 // console.log(isDesigner);
 
-let tipArray = [];
-let totalArray = [];
+//coding challenge 3
 
-function calculateTotal(bill) {
-    if (bill < 50) {
-        let tip = Math.round((bill * .2)*100)/100;
-        tipArray.push(tip);
-        let total = bill + tip;
-        totalArray.push(total)
-    } else if (bill >= 50 && bill <= 200) {
-        let tip = Math.round((bill * .15)*100)/100;
-        tipArray.push(tip);
-        let total = bill + tip;
-        totalArray.push(total)
-    } else if (bill > 200) {
-        let tip = Math.round((bill * .1)*100)/100;
-        tipArray.push(tip);
-        let total = (bill + tip)
-        totalArray.push(total)
-    }
-}
+// let tipArray = [];
+// let totalArray = [];
 
-calculateTotal(124);
-calculateTotal(48);
-calculateTotal(268);
+// function calculateTotal(bill) {
+//     if (bill < 50) {
+//         let tip = Math.round((bill * .2)*100)/100;
+//         tipArray.push(tip);
+//         let total = bill + tip;
+//         totalArray.push(total)
+//     } else if (bill >= 50 && bill <= 200) {
+//         let tip = Math.round((bill * .15)*100)/100;
+//         tipArray.push(tip);
+//         let total = bill + tip;
+//         totalArray.push(total)
+//     } else if (bill > 200) {
+//         let tip = Math.round((bill * .1)*100)/100;
+//         tipArray.push(tip);
+//         let total = (bill + tip)
+//         totalArray.push(total)
+//     }
+// }
 
-console.log(tipArray, totalArray);
+// calculateTotal(124);
+// calculateTotal(48);
+// calculateTotal(268);
+
+// console.log(tipArray, totalArray);
+
+/**
+ * objects and properties
+ */
+
+ let john = {
+     firstName: "John",
+     lastName: "Smith",
+     birthYear: 1990,
+     family: ["Jane", "Mark", "Bob", "Emily"],
+     job: "teacher",
+     isMarried: false
+ };
+
+ console.log(john.firstName);
+ console.log(john["lastName"]);
+ let x = "birthYear";
+ console.log(john[x]);
+
+ john.job = "designer";
+ john["isMarried"] = true;
+ console.log(john);
+
+ let jane = new Object();
+ jane.firstName = "Jane";
+ jane.birthYear = 1969;
+ jane["lastName"] = "Smith"
+ console.log(jane);
