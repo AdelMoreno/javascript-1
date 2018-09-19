@@ -335,29 +335,54 @@
  * arrays
  */
 
- let names = ["John", "Mark", "Jane"];
- let years = new Array(1990, 1969, 1948);
+//  let names = ["John", "Mark", "Jane"];
+//  let years = new Array(1990, 1969, 1948);
 
- console.log(names[1]);
- console.log(names.length);
+//  console.log(names[1]);
+//  console.log(names.length);
 
- names[1] = "Ben";
- names[names.length] = "Mary";
- console.log(names);
+//  names[1] = "Ben";
+//  names[names.length] = "Mary";
+//  console.log(names);
 
- // different data types
- let john = ["John", "Smith", 1990, "teacher", false];
+//  // different data types
+//  let john = ["John", "Smith", 1990, "teacher", false];
 
- john.push("blue");
- john.unshift("Mr.");
- console.log(john);
+//  john.push("blue");
+//  john.unshift("Mr.");
+//  console.log(john);
 
- john.pop();
- john.pop();
- john.shift();
- console.log(john);
+//  john.pop();
+//  john.pop();
+//  john.shift();
+//  console.log(john);
 
- console.log(john.indexOf(1990));
+//  console.log(john.indexOf(1990));
 
-let isDesigner = john.indexOf("designer") === -1 ? "john is Not a designer" : "John Is a designer";
-console.log(isDesigner);
+// let isDesigner = john.indexOf("designer") === -1 ? "john is Not a designer" : "John Is a designer";
+// console.log(isDesigner);
+
+let billArray = [];
+let totalArray = [];
+
+function calculateTotal(bill) {
+    if (bill < 50) {
+        let total = (bill * .2) + bill;
+        billArray.push(bill);
+        totalArray.push(total)
+    } else if (bill >= 50 && bill <= 200) {
+        let total = (bill * .15) + bill;
+        billArray.push(bill);
+        totalArray.push(total)
+    } else if (bill > 200) {
+        let total = (bill * .1) + bill;
+        billArray.push(bill);
+        totalArray.push(total)
+    }
+}
+
+calculateTotal(20);
+calculateTotal(120);
+calculateTotal(300);
+
+console.log(billArray, totalArray);
