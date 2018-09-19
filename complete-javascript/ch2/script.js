@@ -314,20 +314,50 @@
  // function whatDoYouDo(job, firstName) {}
 
  //function expression
-let whatDoYouDo = function(job, firstName) {
-    switch(job) {
-        case "teacher":
-            return firstName + " teaches kids how to code";
-        case "driver":
-            return firstName + " drives a cab in Lisbon.";
-        case "designer":
-            return firstName + " designs beautiful websites";
-        default:
-            return firstName + " does something else";
-    }
-}
+// let whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//         case "teacher":
+//             return firstName + " teaches kids how to code";
+//         case "driver":
+//             return firstName + " drives a cab in Lisbon.";
+//         case "designer":
+//             return firstName + " designs beautiful websites";
+//         default:
+//             return firstName + " does something else";
+//     }
+// }
 
-console.log(whatDoYouDo("teacher", "John"));
-console.log(whatDoYouDo("designer", "Jane"));
-console.log(whatDoYouDo("retired", "Mike"));
+// console.log(whatDoYouDo("teacher", "John"));
+// console.log(whatDoYouDo("designer", "Jane"));
+// console.log(whatDoYouDo("retired", "Mike"));
 
+/**
+ * arrays
+ */
+
+ let names = ["John", "Mark", "Jane"];
+ let years = new Array(1990, 1969, 1948);
+
+ console.log(names[1]);
+ console.log(names.length);
+
+ names[1] = "Ben";
+ names[names.length] = "Mary";
+ console.log(names);
+
+ // different data types
+ let john = ["John", "Smith", 1990, "teacher", false];
+
+ john.push("blue");
+ john.unshift("Mr.");
+ console.log(john);
+
+ john.pop();
+ john.pop();
+ john.shift();
+ console.log(john);
+
+ console.log(john.indexOf(1990));
+
+let isDesigner = john.indexOf("designer") === -1 ? "john is Not a designer" : "John Is a designer";
+console.log(isDesigner);
