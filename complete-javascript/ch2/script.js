@@ -167,7 +167,7 @@
 //  let age = 16;
 
 //  if (age < 13) {
-//      console.log(firstName + " is a boy.") 
+//      console.log(firstName + " is a boy.")
 //   } else if(age >= 13 && age < 20) {
 //       console.log(firstName + " is a teenager.")
 //   } else if(age >= 20 && age < 30) {
@@ -251,28 +251,57 @@
 
 // coding challenge 2
 
-let johnsGameOne = 10;
-let johnsGameTwo = 10;
-let johnsGameThree = 10;
+// let johnsGameOne = 10;
+// let johnsGameTwo = 10;
+// let johnsGameThree = 10;
 
-let mikesGameOne = 10;
-let mikesGameTwo = 10;
-let mikesGameThree = 10;
+// let mikesGameOne = 10;
+// let mikesGameTwo = 10;
+// let mikesGameThree = 10;
 
-let marysGameOne = 10;
-let marysGameTwo = 10;
-let marysGameThree = 10;
+// let marysGameOne = 10;
+// let marysGameTwo = 10;
+// let marysGameThree = 10;
 
-let johnsAverage = (johnsGameOne + johnsGameTwo + johnsGameThree) / 3;
-let mikesAverage = (mikesGameOne + mikesGameTwo + mikesGameThree) / 3;
-let marysAverage = (marysGameOne + marysGameTwo + marysGameThree) / 3;
+// let johnsAverage = (johnsGameOne + johnsGameTwo + johnsGameThree) / 3;
+// let mikesAverage = (mikesGameOne + mikesGameTwo + mikesGameThree) / 3;
+// let marysAverage = (marysGameOne + marysGameTwo + marysGameThree) / 3;
 
-if (johnsAverage > mikesAverage && johnsAverage > marysAverage) {
-    console.log("John is the winner with " + Math.round(johnsAverage) + " points!");
-} else if (mikesAverage > johnsAverage && mikesAverage > marysAverage) {
-    console.log("Mike is the winner with " + Math.round(mikesAverage) + " points!");
-} else if (marysAverage > johnsAverage && marysAverage > mikesAverage) {
-    console.log("Mary is the winner with " + Math.round(marysAverage) + " points!")
-} else if (mikesAverage === johnsAverage && mikesAverage === marysAverage) {
-    console.log("It was a tie with everyone having " + Math.round(mikesAverage) + " points!")
+// if (johnsAverage > mikesAverage && johnsAverage > marysAverage) {
+//     console.log("John is the winner with " + Math.round(johnsAverage) + " points!");
+// } else if (mikesAverage > johnsAverage && mikesAverage > marysAverage) {
+//     console.log("Mike is the winner with " + Math.round(mikesAverage) + " points!");
+// } else if (marysAverage > johnsAverage && marysAverage > mikesAverage) {
+//     console.log("Mary is the winner with " + Math.round(marysAverage) + " points!")
+// } else if (mikesAverage === johnsAverage && mikesAverage === marysAverage) {
+//     console.log("It was a tie with everyone having " + Math.round(mikesAverage) + " points!")
+// }
+
+/**
+ * functions
+ */
+
+ function calculateAge(birthYear) {
+     return 2018 - birthYear;
+ }
+
+ let ageJohn = calculateAge(1990);
+ let ageMike = calculateAge(1948);
+ let ageJane = calculateAge(1969);
+ 
+ console.log(ageJohn, ageMike, ageJane)
+
+ function yearsUntilRetirement(year, firstName) {
+     let age = calculateAge(year);
+     let retirement = 65 - age;
+
+     if (retirement > 0) {
+     console.log(firstName + " retires in " + retirement + " years.")
+ } else {
+    console.log(firstName + " is already retired.")
+ }
 }
+
+ yearsUntilRetirement(1990, "John");
+ yearsUntilRetirement(1948, "Mike");
+ yearsUntilRetirement(1969, "Jane");
