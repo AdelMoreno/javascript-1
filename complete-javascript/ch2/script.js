@@ -517,31 +517,90 @@
 //     console.log(john[i]);
 // }
 
-let tips = [];
-let totals = [];
+let johnTips = [];
+let johnTotals = [];
 
-let bill = {
+let johnBill = {
     bills: [124, 48, 268, 180, 42],
     calcTip: function() { for (let i = 0; i < this.bills.length; i++) {
         if (this.bills[i] < 50) {
             let tip = this.bills[i] * .2;
-            tips.push(tip);
+            johnTips.push(tip);
             let total = this.bills[i] + tip;
-            totals.push(total);
-        } else if (this.bills[i] >= 50 && this.bills < 200) {
+            johnTotals.push(total);
+        } else if (this.bills[i] >= 50 && this.bills <= 200) {
             let tip = this.bills[i] * .15;
-            tips.push(tip);
+            johnTips.push(tip);
             let total = this.bills[i] + tip;
-            totals.push(total);
+            johnTotals.push(total);
         } else {
             let tip = this.bills[i] * .10;
-            tips.push(tip);
+            johnTips.push(tip);
             let total = this.bills[i];
-            totals.push(total);
+            johnTotals.push(total);
         }
     }
 }
 }
 
-bill.calcTip();
-console.log(tips, totals);
+
+
+let markTips = [];
+let markTotals = [];
+
+let markBill = {
+    bills: [77, 375, 110, 45],
+    calcTip: function() { for (let i = 0; i < this.bills.length; i++) {
+        if (this.bills[i] < 100) {
+            let tip = this.bills[i] * .2;
+            markTips.push(tip);
+            let total = this.bills[i] + tip;
+            markTotals.push(total);
+        } else if (this.bills[i] >= 100 && this.bills <= 300) {
+            let tip = this.bills[i] * .15;
+            markTips.push(tip);
+            let total = this.bills[i] + tip;
+            markTotals.push(total);
+        } else {
+            let tip = this.bills[i] * .10;
+            markTips.push(tip);
+            let total = this.bills[i];
+            markTotals.push(total);
+        }
+    }
+}
+}
+
+function johnAverage() {
+    let sum = 0;
+    for (let i = 0; i < johnTips.length; i++) {
+        sum = sum + johnTips[i];
+    }
+    return (sum / (johnTips.length))
+}
+
+function markAverage() {
+    let sum = 0;
+    for (let i = 0; i < markTips.length; i++) {
+        sum = sum + markTips[i];
+    }
+    return sum / (markTips.length)
+}
+
+function compare() {
+    if (johnAverage() > markAverage()) {
+        console.log("john's average of " + johnAverage() + " is higher.")
+    } else if (johnAverage() < markAverage()) {
+        console.log("mark's average of " + markAverage() + " is higher.")
+    } else if (johnAverage() === markAverage()) {
+        console.log("both had the same average of " + johnAverage())
+    }
+}
+
+
+johnBill.calcTip();
+markBill.calcTip();
+console.log(johnAverage());
+console.log(markAverage());
+compare();
+console.log(johnTips, johnTotals, markTips, markTotals);
