@@ -517,3 +517,31 @@
 //     console.log(john[i]);
 // }
 
+let tips = [];
+let totals = [];
+
+let bill = {
+    bills: [124, 48, 268, 180, 42],
+    calcTip: function() { for (let i = 0; i < this.bills.length; i++) {
+        if (this.bills[i] < 50) {
+            let tip = this.bills[i] * .2;
+            tips.push(tip);
+            let total = this.bills[i] + tip;
+            totals.push(total);
+        } else if (this.bills[i] >= 50 && this.bills < 200) {
+            let tip = this.bills[i] * .15;
+            tips.push(tip);
+            let total = this.bills[i] + tip;
+            totals.push(total);
+        } else {
+            let tip = this.bills[i] * .10;
+            tips.push(tip);
+            let total = this.bills[i];
+            totals.push(total);
+        }
+    }
+}
+}
+
+bill.calcTip();
+console.log(tips, totals);
