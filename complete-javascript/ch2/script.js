@@ -576,7 +576,7 @@ function johnAverage() {
     for (let i = 0; i < johnTips.length; i++) {
         sum = sum + johnTips[i];
     }
-    return (sum / (johnTips.length))
+    return sum / (johnTips.length)
 }
 
 function markAverage() {
