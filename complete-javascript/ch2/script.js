@@ -557,12 +557,12 @@ let markBill = {
             let total = this.bills[i] + tip;
             markTotals.push(total);
         } else if (this.bills[i] >= 100 && this.bills <= 300) {
-            let tip = this.bills[i] * .15;
+            let tip = this.bills[i] * .1;
             markTips.push(tip);
             let total = this.bills[i] + tip;
             markTotals.push(total);
         } else {
-            let tip = this.bills[i] * .10;
+            let tip = this.bills[i] * .25;
             markTips.push(tip);
             let total = this.bills[i];
             markTotals.push(total);
