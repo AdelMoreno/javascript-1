@@ -29,3 +29,7 @@ jane.calculateAge();
 mark.calculateAge();
 
 console.log(john.lastName, jane.lastName, mark.lastName);
+
+let x = [2, 4, 6];
+
+console.info(x);
